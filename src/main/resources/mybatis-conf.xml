@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--
+    environments:开发模式
+    work:工作模式
+    default="development"，id="development"，两个的属性值必须一致
+     -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://tx.zhangyingwei.com:3306/miner-plus?useUnicode=true&amp;characterEncoding=UTF8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="723129Zhangyingwei"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 在配置文件中 关联包下的 接口类 -->
+    <mappers>
+        <mapper class="com.zhangyingwei.miner.server.data.mapper.ResourcesMapper"/>
+        <mapper class="com.zhangyingwei.miner.server.data.mapper.ContentMapper"/>
+    </mappers>
+</configuration>
