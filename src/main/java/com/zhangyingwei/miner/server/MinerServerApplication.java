@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 @Store(MinerStore.class)
 @TaskErrorHandlerConfig(MinerTaskErrorHandler.class)
 @AutoClose(true)
-@ThreadConfig(num = 1,sleep = 500)
+@ThreadConfig(num = 5,sleep = 500)
 public class MinerServerApplication {
     private static Logger logger = LoggerFactory.getLogger(MinerServerApplication.class);
     public static void main(String[] args) throws Exception {

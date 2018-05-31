@@ -17,6 +17,7 @@ public class Resources {
     public static final Integer FLAG_DEL = 3;
     private Integer id;
     private String resources;
+    private String title;
     private String rgroup;
     private String rtype;
     private String createdate;
